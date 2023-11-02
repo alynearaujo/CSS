@@ -1,0 +1,236 @@
+/* Animation */
+@keyframes animacao {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+@keyframes animacao2 {
+	0% {}
+	30% {width: 100px;}
+	60% {background-color: red;}
+	80% {left: 100px; background-color: blue;}
+	100% {height: 100px;}
+}
+
+@keyframes animacao3 {
+	from {left: 0;}
+	to {left: 200px; background-color: green;}
+}
+
+@keyframes animacao4 {
+	from {left: 0;}
+	to {left: 500px;}
+}
+
+@keyframes animacao5 {
+	0% {left: 0px}
+	25% {left: 20px; background-color: blue;}
+	60% {left: 100px; background-color: orange;}
+	100% {left: 50px; background-color: red;}
+}
+
+.animation-div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: animacao;
+    animation-duration: 5s;
+}
+
+.animation-div2 {
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	animation-name: animacao2;
+	animation-duration: 6s;
+	position: relative;
+}
+
+/* Animation delay e iteration */
+.animation-div3 {
+	width: 100px;
+	height: 100px;
+	animation-name: animacao3;
+	background-color: purple;
+	position: relative;
+	animation-duration: 5s;
+	animation-delay: 1s; /* a animação começa a partir dos 2s */
+	animation-iteration-count: 3; /* definir a quantidade de vezes que a animação vai rodar | 
+	use o "infinite" para a animação rodar infinitamente */
+}
+
+/* timing function */
+.box {
+	background-color: orange;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	animation-name: animacao4;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+#animation-div4 {
+	animation-timing-function: linear;
+}
+
+#animation-div5 {
+	animation-timing-function: ease;
+}
+
+#animation-div6 {
+	animation-timing-function: ease-in;
+}
+
+#animation-div7 {
+	animation-timing-function: ease-out;
+}
+
+#animation-div8 {
+	animation-timing-function: ease-in-out;
+}
+
+/* shorthand - nome, duração, timing-function-delay, iteration */
+
+#animation-div9 {
+	background-color: darkblue;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	animation: animacao5 8s ease-out 2s infinite;
+}
+
+/* hover */
+.btn {
+	display: block;
+	position: relative;
+	padding: 10px;
+	margin-bottom: 25px;
+	width: 80px;
+	height: 40px;
+	color:  #fff;
+	text-transform: uppercase;
+	background-color: #333;
+	border: 1px solid #333;
+	cursor: pointer;
+	text-align: center;
+	transition: 1s;
+}
+
+.btn:hover {
+	color: #333;
+	background-color: #fff;
+}
+
+.transition {
+	width: 50px;
+	height: 100px;
+	background-color: red;
+	transition: 3s;
+}
+
+.transition:hover {
+	width: 300px;
+}
+
+/* gradient */
+
+.gradient-box {
+	width: 500px;
+	height: 200px;
+	position: relative;
+	margin: 20px;
+}
+
+.gradient1 {
+	background-image: linear-gradient(purple, blue);
+}
+
+.gradient2 {
+	background-image: linear-gradient(to right, purple, blue);
+}
+
+.gradient3 {
+	background-image: linear-gradient(to left, red, yellow);
+}
+
+.gradient4 {
+	background-image: linear-gradient(to top, red, yellow);
+}
+
+.gradient5 {
+	background-image: linear-gradient(to top right, purple, blue, red);
+}
+
+.gradient6 {
+	background-image: linear-gradient(#FFF, #CCC, #000);
+}
+
+.gradient7 {
+	background-image: radial-gradient(#0099cc, #33cc33, yellow);
+}
+
+.gradient8 {
+	background-image: radial-gradient(#0099cc 10%, #33cc33 30%, orange);
+}
+
+.gradient9 {
+	background-image: radial-gradient(circle, #0099cc, #33cc33 , orange);
+}
+
+/* font face */
+
+@font-face {
+	font-family: "Lage Grafica";
+	src: url(./fonts/lage_grafica.ttf);
+}
+.fontface {
+	font-family: "Lage Grafica";
+}
+
+/* media query */
+
+.mediaquery {
+	height: 200px;
+	width: 1200px;
+	background-color: red;
+}
+
+@media (max-width: 1000px) {
+	.mediaquery {
+		width: 500px;
+		background-color: blue;
+	}
+}
+
+@media (max-width: 768px) {
+	.mediaquery {
+		width: 300px;
+		background-color:green;
+	}
+}
+
+@media (max-width: 512px) {
+	.mediaquery {
+		width: 200px;
+		background-color: pink;
+	}
+}
+
+/* border radius */
+
+.div-border {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	margin: 20px;
+}
+
+.border-radius1 {
+	border-radius: 50px;
+}
+
+.border-radius2 {
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 40px;
+}
